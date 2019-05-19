@@ -7,9 +7,9 @@ class Pokemon extends React.Component {
             <div className="card">
               <div className="card__image">
                 <img src={url} alt={name}/>
-              </div>
+            </div>
               <h2 className="title">{name}</h2>
-              <ul className="powers">Pokemon
+              <ul className="powers">
                   {types.map((type, indexType) => {
                     return (
                     <li className="power" key={indexType}>{type}</li>
