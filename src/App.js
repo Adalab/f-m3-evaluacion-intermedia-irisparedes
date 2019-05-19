@@ -1,5 +1,5 @@
 import React from 'react';
-import Pokemon from './components/Pokemon'
+import PokeList from './components/PokeList';
 import './App.css';
 
 const pokemon = [
@@ -16,27 +16,17 @@ const pokemon = [
 ];
 
 class App extends React.Component {
-  
-  render(){
-  return (
-    <div className="App">
-      <h1 className="title">Mi lista de pokemon</h1>
-      <ul className="cardList">
-      {pokemon.map((item, index) => {
-        return (
-          <li className="cardLi" key={index}>
-            <Pokemon 
-              url={item.url}
-              name={item.name}
-              types={item.types}
-            />
-          </li>
-        );
-      })}
-      </ul>
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <h1 className="title">Mi lista de pokemon</h1>
+          <PokeList
+            pokemon={pokemon} 
+          />
+      </div>
+    );
   }
 }
 
 export default App;
+
